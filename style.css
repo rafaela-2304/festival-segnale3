@@ -1,0 +1,388 @@
+/* Palette e caratteri del festival */
+:root {
+  --colore-verde: #215440;
+  --colore-sfondo: #f4f8f9;
+  --colore-giallo: #eacb47;
+  --colore-blu: #056395;
+  --colore-blu-scuro: #03486d;
+  --colore-rosso: #b93d25;
+  --colore-bordo: #c6d5d0;
+
+  --colore-primario: var(--colore-blu);
+  --colore-primario-scuro: var(--colore-blu-scuro);
+  --colore-testo: var(--colore-verde);
+
+  --font-testo: Georgia, "Times New Roman", serif;
+  --font-titoli: "Redaction 35", Georgia, "Times New Roman", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--colore-sfondo);
+  color: var(--colore-testo);
+  font-family: var(--font-testo);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--colore-blu);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 3px solid var(--colore-verde);
+  outline-offset: 2px;
+}
+
+.container {
+  width: 92%;
+  max-width: 68rem;
+  margin: 0 auto;
+}
+
+/* Intestazione sticky e menu */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0.75rem 0;
+  border-bottom: 4px solid var(--colore-verde);
+  background: var(--colore-sfondo);
+}
+
+.brand {
+  display: inline-block;
+  color: var(--colore-verde);
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.brand span {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+.site-header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.site-header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  margin-top: 0;
+}
+
+.site-header nav a {
+  display: block;
+  padding: 0.25rem 0;
+}
+
+/* Testi e titoli */
+.intro {
+  padding: 3rem 0 1rem;
+}
+
+.eyebrow,
+.event-meta {
+  color: var(--colore-verde);
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.eyebrow {
+  text-decoration: underline;
+  text-decoration-color: var(--colore-giallo);
+  text-decoration-thickness: 0.2em;
+  text-underline-offset: 0.2em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-titoli);
+  line-height: 1.2;
+}
+
+h1 {
+  color: var(--colore-rosso);
+}
+
+h2,
+h3 {
+  color: var(--colore-verde);
+}
+
+
+h1 {
+  max-width: 18ch;
+  margin: 0.75rem 0 1.25rem;
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  line-height: 0.95;
+}
+
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  margin: 0.5rem 0 0.75rem;
+  font-size: 1.375rem;
+}
+
+.lead {
+  max-width: 48ch;
+  font-size: 1.25rem;
+}
+
+.reading-text {
+  max-width: 65ch;
+}
+
+/* Pulsante della Home */
+.button-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  background: var(--colore-blu);
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.button-link:hover {
+  background: var(--colore-blu-scuro);
+}
+
+.content-section {
+  margin: 2rem 0 3rem;
+}
+
+/* Immagine della Home */
+.festival-image {
+  display: block;
+  width: 100%;
+  max-width: 54rem;
+  height: auto;
+  margin-top: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+/* Elenco dei luoghi nella Home */
+.venues {
+  padding-left: 1.25rem;
+}
+
+.venues li {
+  margin-bottom: 0.5rem;
+}
+
+/* Griglia degli eventi */
+.event-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.event-card {
+  overflow: hidden;
+  border: 1px solid var(--colore-bordo);
+  border-radius: 0.75rem;
+  background: #ffffff;
+}
+
+.event-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.event-body {
+  padding: 1.5rem;
+}
+
+.event-place {
+  margin-bottom: 0;
+  color: var(--colore-verde);
+  font-size: 0.875rem;
+}
+
+/* Piè di pagina */
+.site-footer {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--colore-bordo);
+  color: var(--colore-verde);
+  font-size: 0.875rem;
+}
+
+/* Collegamento per saltare al contenuto */
+.skip-link {
+  position: absolute;
+  top: -6rem;
+  left: 1rem;
+  z-index: 1001;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  color: var(--colore-verde);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Da 600 px: due colonne per gli eventi */
+@media (min-width: 600px) {
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Da 1024 px: tre colonne per gli eventi */
+@media (min-width: 1024px) {
+  .event-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Pulsanti della galleria */
+button {
+  padding: 0.65rem 0.5rem;
+  border: 2px solid var(--colore-blu);
+  border-radius: 0.5rem;
+  background: var(--colore-blu);
+  color: #ffffff;
+  font-family: var(--font-testo);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--colore-blu-scuro);
+  background: var(--colore-blu-scuro);
+}
+
+button:focus {
+  outline: 3px solid var(--colore-verde);
+  outline-offset: 2px;
+}
+
+/* Galleria delle sedi */
+.venue-gallery {
+  max-width: 54rem;
+}
+
+.venue-swiper {
+  width: 100%;
+}
+
+.venue-slide {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--colore-bordo);
+  border-radius: 0.75rem;
+  background: #ffffff;
+}
+
+.venue-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.venue-slide figcaption {
+  padding: 1.25rem;
+}
+
+.gallery-controls {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.gallery-count {
+  margin: 0.75rem 0 0;
+  color: var(--colore-rosso);
+  text-align: center;
+}
+
+@media (max-width: 319px) {
+  .gallery-label {
+    font-size: 0;
+  }
+}
+
+/* Mappa */
+.map-container {
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border: 1px solid var(--colore-bordo);
+  border-radius: 0.75rem;
+  background: #ffffff;
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+  height: 28rem;
+  border: 0;
+}
+
+/* Indirizzi delle sedi */
+.venue-addresses {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.venue-address {
+  padding: 1.25rem;
+  border: 1px solid var(--colore-bordo);
+  border-radius: 0.75rem;
+}
+
+.teaching-note {
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .venue-addresses {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Da 600 px: menu in riga e intestazione orizzontale */
+@media (min-width: 600px) {
+  .site-header .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .site-header nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+  }
+}
